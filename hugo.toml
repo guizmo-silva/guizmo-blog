@@ -1,0 +1,55 @@
+baseURL = 'https://example.org/'
+title = 'Guilherme Silva'
+theme = 'PaperMod'
+languageCode = 'pt-BR'
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShareButtons = ["linkedin", "x", "whatsapp"]
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  description = 'Reflexões de um designer millenial'
+
+[params.homeInfoParams]
+  Title = "Bem-vindo 👋"
+  Content = "Reflexões de um designer millenial"
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/guizmo-silva"
+
+[[params.socialIcons]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/guisilva/"
+
+[[params.socialIcons]]
+  name = "behance"
+  url = "https://www.behance.net/gui_silva"
+
+[[params.socialIcons]]
+  name = "itchio"
+  url = "https://guizmo89.itch.io/"
+
+[[params.socialIcons]]
+  name = "lastfm"
+  url = "https://www.last.fm/pt/user/gui21silva"
+
+[[params.socialIcons]]
+  name = "letterboxd"
+  url = "https://letterboxd.com/guizmovies/"
+  
+
+[[params.socialIcons]]
+  name = "email"
+  url = "mailto:guisilva.design@gmail.com"
+
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
