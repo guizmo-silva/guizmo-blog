@@ -2,6 +2,7 @@ baseURL = 'https://example.org/'
 title = 'Guilherme Silva'
 theme = 'PaperMod'
 languageCode = 'pt-BR'
+defaultContentLanguage = 'pt'
 
 [params]
   defaultTheme = "auto"
@@ -11,6 +12,7 @@ languageCode = 'pt-BR'
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
+  comments = true
   description = 'Reflexões de um designer millenial'
 
 [params.homeInfoParams]

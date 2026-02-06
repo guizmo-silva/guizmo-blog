@@ -1,0 +1,9 @@
+.post-entry,
+.first-entry:not(.home-info) {
+    transition: transform 0.2s ease;
+}
+
+.post-entry:hover,
+.first-entry:not(.home-info):hover {
+    transform: scale(1.02);
+}
