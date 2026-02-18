@@ -49,6 +49,9 @@ defaultContentLanguage = 'pt'
   url = "mailto:guisilva.design@gmail.com"
 
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [menu]
   [[menu.main]]
     identifier = "posts"
