@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://guizmo-silva.vercel.app/'
 title = 'Guilherme Silva'
 theme = 'PaperMod'
 languageCode = 'pt-BR'
@@ -51,6 +51,9 @@ defaultContentLanguage = 'pt'
 
 [markup.goldmark.renderer]
   unsafe = true
+
+[markup.highlight]
+  noClasses = false
 
 [menu]
   [[menu.main]]
