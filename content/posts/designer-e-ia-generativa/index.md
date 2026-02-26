@@ -6,7 +6,7 @@ draft: false
 cover:
   image: /images/ghostintheshell.gif
   caption: "Como eu me sinto codando com IA"
-  alt: "Teste"
+  alt: "Cena do filme Ghost in the Shell onde o operador multiplica seus dedos em vários pequenos dedinhos que começam a digitar freneticamente em um teclado de computador futurista"
 
 ---
 
@@ -49,11 +49,23 @@ No fim do ano passado, a Anthropic — empresa que faz o Claude — fez uma prom
 
 ## Botando ideias em prática
 
-Tá bom, eu confesso, eu já tive uma experiência prévia com IA e código. Mas foi coisa pouca, eu prometo. 
+Tá bom, eu confesso, eu já tive uma experiência prévia com IA e código… ok, foram duas. Mas foi coisa pouca, eu prometo. 
 
-Eu possuo um Raspiberry Pi 4, que uso como "console" para emular jogos antigos *(tudo legalizado, graças a Deus)*. Ano passado fui atualizar o sistema operacional e isso iria demandar a formatação do cartão SD dele, **o que faria eu perder todos os *save games* de jogos que tenho lá**. Como estava de bobeira, pedi pro Claude criar um scriptzinho de terminal para automatizar o backup dos saves dos jogos. Em pouco mais de 1 hora eu consegui o que queria, rodando direitinho. Dei umas emperiquitadas, colocando seleção de idiomas e tudo mais e publiquei no meu Github. **Tem pra [Linux](https://github.com/guizmo-silva/recalbox-saves-backup-linux) e pra [Windows](https://github.com/guizmo-silva/recalbox-saves-backup-windows) até.**
+**A primeira**: Eu possuo um Raspiberry Pi 4, que uso como "console" para emular jogos antigos *(tudo legalizado, graças a Deus)*. Ano passado fui atualizar o sistema operacional e isso iria demandar a formatação do cartão SD dele, **o que faria eu perder todos os *save games* de jogos que tenho lá**. Como estava de bobeira, pedi pro Claude criar um scriptzinho de terminal para automatizar o backup dos saves dos jogos. Em pouco mais de 1 hora eu consegui o que queria, rodando direitinho. Dei umas emperiquitadas, colocando seleção de idiomas e tudo mais e publiquei no meu Github. **Tem pra [Linux](https://github.com/guizmo-silva/recalbox-saves-backup-linux) e pra [Windows](https://github.com/guizmo-silva/recalbox-saves-backup-windows) até.**
 
-**Desde então fiquei maravilhado com as possibilidades.**
+**A segunda**: Essa é um pouco mais complexa, mas ainda não foi um projeto do zero. Existe um programinha *open source* chamado [Deej](https://github.com/omriharel/deej). Ele permite que você **crie uma interface física (geralmente com Arduíno) para controlar individualmente programas separados no computador**. Eu queria construir um para poder mexer no volume do navegador, Discord e jogo aberto. Isso pois por várias vezes já tive que equalizar os volumes *na mão* para poder jogar e conversar com meus amigos ao mesmo tempo num volume agradável.
+
+Aqui o Claude me ajudou primeiro com a eletrônica, me dando instruções de como montar o aparelho. Isso porque apesar de haver instruções oficiais sobre a montagem, tanto do autor como da comunidade, **eu inventei de, ao invés de usar um potenciômetro básico como é o recomendado, utilizar um *rotary encoder*  (lá vai eu inventar né)**. Para quem não conhece, um *encoder* é quase como um potenciômetro normal, mas ele gira infinitamente pra qualquer lado e ainda tem um botãozinho se você apertar o *knob* (fora que a sensação tátil é bem mais gostosinha).
+
+Depois de montado, o Claude me ajudou com a lógica pra fazer o Arduino e os componentes que eu utilizei funcionarem. Depois de muitos vai e vens, consegui fazer funcionar. Mas como nada está bom pra mim, faltou um detalhe: **queria poder utilizar os botões do encoder como controle de mídia.**
+
+Originalmente o Deej não conta com essa função. Procurei um alternativa para rodar junto do Deej e utilizar os inputs físicos mas o Arduino possui uma limitação que não deixa mais de um software controlá-lo ao mesmo tempo. A solução? Modificar o próprio Deej. E foi o que eu fiz.
+
+Criei um fork do programinha e mandei brasa no Claude pra que ele fizesse as modificações necessárias.
+[Após alguns dias mexendo, adicionei a funcionalidade que queria, concluí o projeto e também publiquei no meu Github.](https://github.com/guizmo-silva/deej-encoder-buttons) *Deixa uma estrelinha lá, nunca que te pedi nada.*
+
+
+**Desde então fiquei maravilhado com as possibilidades de uso do meu amigo programador virtual.**
 
 Voltando para o presente, queria executar uma ideia que me permitisse treinar um pouco de UI, UX(pra tirar a ferrugem do Figma) e que tivesse **um grau de complexidade mais elevado**, para sentir como é o *workflow* com o Claude.
 
@@ -185,18 +197,35 @@ Bem, pra não me alongar muito, dei uma senhora resumida no processo apenas para
 
 De forma geral, foi — e está sendo — uma produção muito satisfatória ver uma ideia se concretizando, tomando forma e até potencialmente podendo ser útil para outras pessoas, já que o projeto é **100% open-source**.
 
-Isso significa que estou oficialmente entrando no mercado como o mais novo *vibe coder* profissional? Obviamente que não.
+Isso significa que estou oficialmente entrando no mercado como o mais novo *vibe coder* profissional? **Obviamente que não.**
 
 Mais uma vez: a faculdade e a vivência com profissionais de tecnologia foram essenciais para eu ter a noção de que o que eu produzi **não chega nem perto do que é um projeto real de software**. Uma aplicação ou sistema profissional envolve *skills* e experiências que eu jamais poderia empregar apenas na onda do *vibe code*.
 
-Mas toda essa brincadeira me fez pensar no futuro do desenvolvimento de software como um todo. Acompanho muitos profissionais da área e já é claro que um novo paradigma está se estabelecendo. Talvez ainda não tenhamos chegado na sua forma final, mas em pouco tempo já estamos sentindo como profissionais de tecnologia e áreas adjacentes estão snedo impactados.
+Mas toda essa brincadeira me fez pensar no futuro do desenvolvimento de software como um todo. Acompanho muitos profissionais da área e já é claro que um novo paradigma está se estabelecendo. Talvez ainda não tenhamos chegado na sua forma final, mas em pouco tempo já estamos sentindo como profissionais de tecnologia e áreas adjacentes estão sendo impactados.
 
 ![Como eu me sinto durante cada sessão de código com o Claude](anonymous.jpg "Como eu me sinto durante cada sessão de código com o Claude")
 
 <p style="text-align: center; font-size: 0.75em; opacity: 0.7;"><a href="https://www.flickr.com/photos/130721398@N06/25967653285" title="Anonymous">Anonymous</a>" por <a href="https://www.flickr.com/photos/130721398@N06/">Nils Werner</a>, <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/deed.pt-br" rel="license noopener noreferrer">CC BY-NC-SA 2.0</a></p>
 
-Talvez os designer possam ser mais ativos no desenvolvimento. Talvez os *devs* consigam trocar figurinhas com os designers. Quem sabe? O futuro está sendo escrito diante de nossos olhos, sejamos responsáveis com a tecnologia e aguardemos que o melhor aconteça.
+Talvez os designer possam ser mais ativos no desenvolvimento. Talvez os *devs* consigam trocar mais figurinhas com os designers. Quem sabe? O futuro está sendo escrito diante de nossos olhos, sejamos responsáveis com a tecnologia e aguardemos que o melhor aconteça.
 
-Ah! Eu falei que eu ia mostrar no que deu né? Então tá aqui, pra quem quiser testar o **MKD** (*nome ainda a ser oficializado, mas como vocês sabem, as gambiarras as vezes se tornam definitivas...*), editor de markdown que roda em docker (versão desktop em breve) que era pra ser bem simples mas ganhou uns *guere-gueres* a mais: **[teste agora!](https://github.com/guizmo-silva/markdown-editor)**
+Ah! Eu falei que eu ia mostrar no que deu né?
+
+Então tá aqui, pra quem quiser testar: **MKD** (*também fui infectado pelo mesmo vírus que faz os programadores não conseguirem dar nome pra nada, então ficou esse mesmo por enquanto*)
+
+### Features:
+- Barra lateral com navegador de elementos e explorador de arquivos
+  - Selecione facilmente entre títulos, citações, links, imagens entre outros tipos de texto
+- Seletor de visualização: Só código, só texto ou tela dividida
+- Importa arquivos em .txt e .md
+- Exporta em .md, .pdf e html
+- Salvamento automático
+- Abas para editar múltiplos documentos ao mesmo tempo
+- Interface e spellchecking em vários idiomas
+- E o mais importante: modos claro e **escuro**!
+
+Por enquanto está disponível a versão em Docker e futuramente também terá a versão para desktop.
+
+**[Teste agora!](https://github.com/guizmo-silva/markdown-editor)** (*E também larga o dedo na estrelinha, não custa nada…*)
 
 ![Tela de exemplo do editor de Markdown](mkd.png "Aproveitem!")
